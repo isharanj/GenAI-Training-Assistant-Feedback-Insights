@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="Arial, Helvetica, sans-serif" font-size="13">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+  <rect width="960" height="520" fill="#fff"/>
+  <text x="480" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">GenAI Training Assistant: Architecture</text>
+
+  <text x="20" y="60" font-weight="bold" fill="#1f4e8c">A. Indexing (run once: python -m app.ingest)</text>
+  <g stroke="#1f4e8c" stroke-width="1.2" fill="#eaf1fb">
+    <rect x="20" y="72" width="150" height="56" rx="6"/><rect x="215" y="72" width="150" height="56" rx="6"/><rect x="410" y="72" width="170" height="56" rx="6"/><rect x="625" y="72" width="140" height="56" rx="6"/>
+  </g>
+  <g text-anchor="middle" fill="#222">
+    <text x="95" y="96">docs/ (md, pdf)</text><text x="95" y="113">+ calendar</text>
+    <text x="290" y="96">Chunk 500 chars</text><text x="290" y="113">overlap 50, keep source</text>
+    <text x="495" y="96">Embed: MiniLM-L6-v2</text><text x="495" y="113">(local)</text>
+    <text x="695" y="96">FAISS index</text><text x="695" y="113">+ chunks.json</text>
+  </g>
+  <g stroke="#555" stroke-width="1.3" marker-end="url(#a)" fill="none"><path d="M170 100H213"/><path d="M365 100H408"/><path d="M580 100H623"/></g>
+
+  <text x="20" y="175" font-weight="bold" fill="#1b7a3a">B. Question answering (Streamlit)</text>
+  <g stroke="#1b7a3a" stroke-width="1.2" fill="#e8f5ec">
+    <rect x="20" y="190" width="130" height="56" rx="6"/><rect x="185" y="190" width="150" height="56" rx="6"/><rect x="370" y="190" width="150" height="56" rx="6"/><rect x="555" y="190" width="170" height="56" rx="6"/><rect x="760" y="190" width="170" height="56" rx="6"/>
+  </g>
+  <g text-anchor="middle" fill="#222">
+    <text x="85" y="214">User question</text><text x="85" y="231">(chat UI)</text>
+    <text x="260" y="214">Embed question</text><text x="260" y="231">search FAISS</text>
+    <text x="445" y="214">Top 4 chunks</text><text x="445" y="231">+ source names</text>
+    <text x="640" y="214">LLM (approved)</text><text x="640" y="231">grounded system prompt</text>
+    <text x="845" y="214">Answer + Sources</text><text x="845" y="231">+ retrieved passages</text>
+  </g>
+  <g stroke="#555" stroke-width="1.3" marker-end="url(#a)" fill="none"><path d="M150 218H183"/><path d="M335 218H368"/><path d="M520 218H553"/><path d="M725 218H758"/><path d="M695 128V160H260V188" stroke-dasharray="5 3"/></g>
+  <text x="480" y="156" font-size="11" fill="#777">index lookup</text>
+
+  <text x="20" y="295" font-weight="bold" fill="#8a4b00">C. Feedback insights</text>
+  <g stroke="#8a4b00" stroke-width="1.2" fill="#fff3e0">
+    <rect x="20" y="310" width="140" height="56" rx="6"/><rect x="200" y="310" width="170" height="56" rx="6"/><rect x="410" y="310" width="170" height="56" rx="6"/><rect x="620" y="310" width="150" height="56" rx="6"/><rect x="810" y="310" width="130" height="56" rx="6"/>
+  </g>
+  <g text-anchor="middle" fill="#222">
+    <text x="90" y="334">feedback.csv</text><text x="90" y="351">(anonymised)</text>
+    <text x="285" y="334">LLM classify prompt</text><text x="285" y="351">theme, sentiment, summary</text>
+    <text x="495" y="334">Parse + validate JSON</text><text x="495" y="351">retry, flag failures</text>
+    <text x="695" y="334">feedback_tagged.csv</text><text x="695" y="351">manual check: 30 rows</text>
+    <text x="875" y="334">Power BI</text><text x="875" y="351">Feedback page</text>
+  </g>
+  <g stroke="#555" stroke-width="1.3" marker-end="url(#a)" fill="none"><path d="M160 338H198"/><path d="M370 338H408"/><path d="M580 338H618"/><path d="M770 338H808"/></g>
+
+  <text x="20" y="415" font-weight="bold" fill="#6a1b9a">D. Responsible AI controls</text>
+  <rect x="20" y="428" width="920" height="72" rx="6" fill="#f5eefa" stroke="#6a1b9a" stroke-width="1.2"/>
+  <g fill="#222">
+    <text x="36" y="452">Answer only from context, refuse out-of-scope, cite sources, max 5 sentences, no personal data</text>
+    <text x="36" y="472">No real data or keys in repo (.env ignored), anonymised inputs, company-approved AI tools only</text>
+    <text x="36" y="492">Human review of AI-written content; accuracy measured (20-question eval, 30-row manual check); limitations logged</text>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+id,question,expected_answer,expected_source,in_scope
+1,How early should I join a virtual session?,At least 5 minutes before the start time,01_training_attendance_policy.md,yes
+2,When is someone marked as a No-show?,Registered but neither attended nor cancelled at least 24 hours before the session,01_training_attendance_policy.md,yes
+3,What happens after three No-shows in 12 months?,Escalated to the department head,01_training_attendance_policy.md,yes
+4,When does the LMS send renewal notices before a mandatory course expires?,60 days; 30 days and 7 days before expiry,02_mandatory_training_policy.md,yes
+5,How long do new joiners have to complete Information Security Awareness?,Within 30 days of their start date,02_mandatory_training_policy.md,yes
+6,Who can be exempt from mandatory training?,Employees on long-term leave of more than 90 days; approved by the Training Lead,02_mandatory_training_policy.md,yes
+7,How often must Data Protection Essentials be completed?,Annually,02_mandatory_training_policy.md,yes
+8,What happens if a session is full?,Added to the waitlist and emailed; contacted in registration order if a seat opens,03_enrollment_cancellation_faq.md,yes
+9,How many active registrations can I hold at once?,Up to 3,03_enrollment_cancellation_faq.md,yes
+10,How do I cancel a registration?,At least 24 hours before by replying to the confirmation email or messaging the Training Team,03_enrollment_cancellation_faq.md,yes
+11,How do I download my certificate from the LMS?,My Learning > Completed > select course > Download Certificate,04_lms_how_to_guide.md,yes
+12,Do I need a separate LMS password?,No; sign in with work account via single sign-on,04_lms_how_to_guide.md,yes
+13,What is the pass mark for mandatory courses?,80%,05_assessment_certification_rules.md,yes
+14,How many attempts do I get at an assessment and how long between them?,3 attempts; wait 24 hours after a failed attempt,05_assessment_certification_rules.md,yes
+15,How many seats are left in the Workplace Health and Safety session on 12 November?,3 seats left,06_training_calendar.md,yes
+16,Who is the trainer for Excel for Reporting?,Priya Nair,06_training_calendar.md,yes
+17,What is the company's parental leave policy?,Not in documents: should refuse,,no
+18,Can I get reimbursed for my home internet while attending virtual training?,Not in documents: should refuse,,no
+19,What is my current training completion score?,Not in documents and personal data: should refuse,,no
+20,Which Python course should I take to become a data scientist?,Not in documents: should refuse,,no
